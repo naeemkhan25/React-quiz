@@ -1,9 +1,9 @@
 import Cleasses from '../Styles/Button.module.css';
 
-export default function Button({ children, ...rest }) {
+export default function Button({ className, children, ...rest }) {
   return (
-    <div class={Cleasses.button} {...rest}>
-      <span>{children}</span>
+    <div className={`${Cleasses.button} ${className}`} {...rest}>
+      {children}
     </div>
   );
 }
