@@ -1,10 +1,14 @@
 import '../Styles/App.css';
 import Layout from './Layout';
-import Home from './pages/Home';
+// import Home from './pages/Home';
+import Singup from './pages/Singup';
+// import Login from './pages/Login';
 function App() {
   return (
     <Layout>
-      <Home />
+      {/* <Home /> */}
+      <Singup />
+      {/* <Login /> */}
     </Layout>
   );
 }
