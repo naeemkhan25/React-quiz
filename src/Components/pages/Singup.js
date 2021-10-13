@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Image from '../../assets/images/signup.svg';
 import Classes from '../../Styles/Singup.module.css';
 import Button from '../Button';
@@ -30,7 +31,7 @@ export default function Singup() {
             <span>Submit now</span>
           </Button>
           <div class='info'>
-            Already have an account? <a href='login.html'>Login</a> instead.
+            Already have an account? <Link to='/login'>Login</Link> instead.
           </div>
         </Form>
       </div>
