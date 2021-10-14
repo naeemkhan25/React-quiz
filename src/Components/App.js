@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import AuthProvider from '../contexts/AuthContext';
 import '../Styles/App.css';
 import Layout from './Layout';
 import Home from './pages/Home';
@@ -9,15 +10,17 @@ import Singup from './pages/Singup';
 function App() {
   return (
     <Router>
-      <Layout>
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route exact path='/singup' component={Singup} />
-          <Route exact path='/quiz' component={Quiz} />
-          <Route exact path='/login' component={Login} />
-          <Route exact path='/result' component={Result} />
-        </Switch>
-      </Layout>
+      <AuthProvider>
+        <Layout>
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route exact path='/singup' component={Singup} />
+            <Route exact path='/quiz' component={Quiz} />
+            <Route exact path='/login' component={Login} />
+            <Route exact path='/result' component={Result} />
+          </Switch>
+        </Layout>
+      </AuthProvider>
     </Router>
   );
 }
